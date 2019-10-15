@@ -1,0 +1,565 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Расписание</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ccc0462e-75f8-49d7-ad5d-e41a8379714a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📄</span></div><h1 class="page-title">Расписание</h1></header><div class="page-body"><ol id="b3901942-9a41-4eeb-b189-8db1a1e2b2a4" class="numbered-list" start="1"><li>8:30</li></ol><ol id="f42ff2e7-b8d9-4b86-bae4-c61253ba05fa" class="numbered-list" start="2"><li>10:10</li></ol><ol id="45b3036b-23f9-42b0-ac85-f5a329582fc2" class="numbered-list" start="3"><li>12:00</li></ol><ol id="0db237e9-6252-4827-8ac2-3f5f6e792125" class="numbered-list" start="4"><li>13:40</li></ol><ol id="61afa143-f709-4ba2-b5db-ac0c1ba30d71" class="numbered-list" start="5"><li>15:20</li></ol><h1 id="28a3c2ad-7434-4098-99e6-89c88905d3ae" class="">Понедельник</h1><ol id="2f824b00-a3ae-4326-8ab0-2bdf09ab850b" class="numbered-list" start="1"><li>Геометрия и топология (пр) доц. Полубоярова Н.М., 3-05 А </li></ol><ol id="355f335a-bfe2-486a-9664-8ccfa8444d93" class="numbered-list" start="2"><li>Алгебра и теория чисел (пр) Доц. Кондрашов А.Н., 1-01 Б</li></ol><ol id="7706e89b-2cc1-49d3-b1d7-a2c8533b2971" class="numbered-list" start="3"><li>Математический анализ (пр)ст.пр. Королев А.Г., 1-01 Б</li></ol><ol id="92adf719-80fd-4d46-bae2-3016c2e5e593" class="numbered-list" start="4"><li>ЗНАМ: Физическая культура и спорт (л), проф. Коваленко Т.Г., 4-29 Г</li></ol><hr id="d2573015-27bf-4a75-835d-d1b5879e2f9b"/><h1 id="38550ffe-d836-4c1a-bea4-d0ab4bddf4a9" class="">Вторник</h1><p id="cff38d0a-3c7d-422c-b887-711e649cf460" class="">1. ————————-</p><p id="e9e074d9-dbf7-401c-9463-d032717fde56" class="">2. Геометрия и топология (л)доц. Полубоярова Н.М., 3-01 А</p><p id="2eaceac5-682d-4afe-b6bd-e37190d66506" class="">3. Русский язык и культура речи(пр), проф. Терентьева Е.В. 3-04А</p><p id="dc454623-2c56-40e1-9283-9870e45ae244" class="">4. Прикладная физическая культура (пр), ст. пр. Швардыгулин А.В., ст.пр. Заулошнов В.А., ст.пр. Никитин С.О., пр. Иноземцева А.Н.</p><hr id="d7f071ac-0536-43bb-b224-aaceafb84321"/><h1 id="3cac291a-d069-4e32-8280-e0f7445235b7" class="">Среда</h1><ol id="cc62772e-eec4-457d-a61f-14222bce8adb" class="numbered-list" start="1"><li>Алгебра и теория чисел (пр)доц. Кондрашов А.Н., 1-01 Б</li></ol><ol id="c94f98c7-33e1-4fae-a446-f1968261f445" class="numbered-list" start="2"><li>Информатика ипрограммирование (лаб)ст.пр. Чебаненко Н.А., 4-02 Аасс. Кузьменко А.Ю., 1-01 А</li></ol><ol id="4a881a9d-2858-4fcd-a008-a8bf0d21b3ad" class="numbered-list" start="3"><li>ЧИСЛ: Информатика ипрограммирование (лаб)ст.пр. Чебаненко Н.А., 1-02 Васс. Кузьменко А.Ю., 1-01 А</li></ol><hr id="fa1dc242-b382-42e4-904f-77bfd21f4d90"/><h1 id="4fdc4324-7de6-4b44-9cb0-303e46fe54ea" class="">Четверг</h1><ol id="186a463c-6a40-46ac-ba36-cd6ff06204e0" class="numbered-list" start="1"><li>Иностранный язык (лаб)доц. Малушко Е.Ю., 3-03 Аст.пр. Буланов Д.С., 33-08 А</li></ol><ol id="3db4eb23-e54d-43bf-bc64-d24409951e25" class="numbered-list" start="2"><li>Иностранный язык (лаб)доц. Малушко Е.Ю., 3-03 Аст.пр. Буланов Д.С., 33-08 А</li></ol><ol id="91593b90-03a5-4f11-ba89-1f849cbab9d6" class="numbered-list" start="3"><li>Математический анализ (пр)ст.пр. Королев А.Г., 1-01 Б</li></ol><hr id="092cc542-f17e-4fa3-b96a-1b31615446f2"/><h1 id="6999fef9-d27a-48d8-ac20-d03306ddf04d" class="">Суббота</h1><ol id="578b80e1-3f12-4872-b1f3-5255f7d8c393" class="numbered-list" start="1"><li>Алгебра и теория чисел (л), доц. Попов В.В., 4-08 А</li></ol><ol id="d866b712-ecbe-4eb0-a2a7-2814af4e400f" class="numbered-list" start="2"><li>Информатика и программирование (л), ст.пр. Штельмах Т.В., 4-08 А</li></ol><ol id="3092224b-f7aa-4638-ab6b-1d710ea3e1f0" class="numbered-list" start="3"><li>Математический анализ (л), доц. Светлов А.В., 4-08 А</li></ol><hr id="727ac073-3607-46d2-a92e-1a5ec88cd26e"/><h2 id="e0e04f99-31cb-4af8-952d-53125238c2fd" class="">1 аттестация</h2><p id="4416a6a5-a315-451a-a451-83cfed046cbe" class="">01.10.2019-07.10.2019</p><h2 id="1e8a881a-1725-4f6d-a54c-b7d30f5d6582" class="">2 аттестация</h2><p id="42c8d532-0289-4972-b406-89e3292161fe" class="">12.11.2019-18.11.2019</p><h2 id="91d4baaa-af98-42d5-a3be-c63f1c205c6b" class="">3 аттестация</h2><p id="db066734-212e-4bdf-8617-0c6ed966fcd1" class="">16.12.2019-28.12.2019</p><hr id="66ded4fb-1912-4270-889c-b9f3e8478dbf"/><h2 id="ea8bb97c-22a4-4db7-bbfa-b37130efb8f4" class="">Числитель</h2><p id="5bb95186-91e6-4659-bbb5-a5cd5fc332a1" class="">01.09-08.09</p><p id="518da104-2f52-4b5c-ab3b-ac16f63b5ab4" class="">16.09-22.09</p><p id="953d933e-1fe9-429d-ab7f-29c04f5f309e" class="">30.09-06.10</p><p id="69d77a5a-4230-4ab5-8966-68a1e948efbd" class="">14.10-20.10</p><p id="d415c705-3043-477c-a686-3f12d35348be" class="">28.10-03.11</p><p id="08de8942-0b77-4bae-8bf7-5c44ac761236" class="">11.11-17.11</p><p id="26832fd9-b825-419f-a477-ea60cbb189d8" class="">25.11-01.12</p><p id="7dcac8f2-689f-4e52-9f42-697a9b3c429a" class="">09.12-15.12</p><p id="01d520cd-6b3e-42dd-88b9-c2c1e1fdbdff" class="">23.12-28.12</p><h2 id="31bfceb6-b20a-486d-b545-b830d2b36d88" class="">Знаменатель</h2><p id="aefac5fb-4af0-419f-9659-8ee420b7a05e" class="">09.09-15.09</p><p id="31fd7ab9-a3a0-4a52-86cb-aeccffce4b20" class="">23.09-29.09</p><p id="62046f2a-cc66-4267-bb39-2acbda96af31" class="">07.10-13.10</p><p id="0007b038-70be-4031-8d6c-86a41ab9d0a3" class="">21.10-27.10</p><p id="21b7644a-c1f9-4c22-89d5-11e07be4f71f" class="">04.11-10.11</p><p id="29328f0b-f091-4bee-8d86-b77e7395b7e5" class="">18.11-24.11</p><p id="027edc6a-4fc9-47b9-938c-05588cb07a30" class="">02.12-08.12</p><p id="854fa082-6ec4-4e1a-a00b-fe3059201132" class="">16.12-22.12</p></div></article></body></html>
