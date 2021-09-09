@@ -193,13 +193,13 @@
         const now = new Date();
         const dayweek = now.getDay();
         let dayweekRu = ''
-        if (dayweek === 0) dayweekRu = 'Понедельник';
-        else if (dayweek === 1) dayweekRu = 'Вторник';
-        else if (dayweek === 2) dayweekRu = 'Среда';
-        else if (dayweek === 3) dayweekRu = 'Четверг';
-        else if (dayweek === 4) dayweekRu = 'Пятница';
-        else if (dayweek === 5) dayweekRu = 'Суббота';
-        else if (dayweek === 6) dayweekRu = 'Воскресенье';
+        if (dayweek === 1) dayweekRu = 'Понедельник';
+        else if (dayweek === 2) dayweekRu = 'Вторник';
+        else if (dayweek === 3) dayweekRu = 'Среда';
+        else if (dayweek === 4) dayweekRu = 'Четверг';
+        else if (dayweek === 5) dayweekRu = 'Пятница';
+        else if (dayweek === 6) dayweekRu = 'Суббота';
+        else if (dayweek === 7) dayweekRu = 'Воскресенье';
 
         $('#nowDayweek').text(dayweekRu)
         $('#nowDate').text(now.toLocaleDateString())
