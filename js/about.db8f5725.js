@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkdvegasa_ru"]=self["webpackChunkdvegasa_ru"]||[]).push([[443],{7381:function(a,n,u){u.r(n),u.d(n,{default:function(){return f}});var e=u(3396);const r={class:"about"},s=(0,e._)("h1",null,"This is an about page",-1),t=[s];function c(a,n){return(0,e.wg)(),(0,e.iD)("div",r,t)}var i=u(89);const o={},d=(0,i.Z)(o,[["render",c]]);var f=d}}]);
+//# sourceMappingURL=about.db8f5725.js.map
