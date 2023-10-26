@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a99e0317-4b0d-4cb6-9671-5648f8c0a93e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,9 +17,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2KYV4KwwzHvd4n2t6q3JJmZ5qvI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,12 +36,17 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/projects/dvegasa.github.io",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\dvegasa.github.io" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\dvegasa.github.io" />
     </key>
@@ -139,6 +147,7 @@
       <updated>1674151310434</updated>
       <workItem from="1674151311432" duration="4000" />
       <workItem from="1698154414359" duration="233000" />
+      <workItem from="1698220023465" duration="640000" />
     </task>
     <servers />
   </component>
