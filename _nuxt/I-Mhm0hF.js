@@ -1,1 +1,0 @@
-import{_ as s,c as o,u as t,o as a}from"./QvGddEKU.js";const c={},r={class:"LayoutBase"};function n(e,_){return a(),o("div",r,[t(e.$slots,"default")])}const d=s(c,[["render",n]]);export{d as default};
