@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba605fd-fb61-43f1-b377-bd02bbdd38ad" name="Changes" comment="deploy" />
+    <list default="true" id="aba605fd-fb61-43f1-b377-bd02bbdd38ad" name="Changes" comment="deploy">
+      <change afterPath="$PROJECT_DIR$/_nuxt/CBvOpLgY.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_nuxt/CaJW_hQK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_nuxt/PageHome.54qNI84-.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_nuxt/builds/meta/6980f134-d1c7-4ca4-b64f-6430e6631d39.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/200.html" beforeDir="false" afterPath="$PROJECT_DIR$/200.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/B1l46enV.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/DZQ-F1X6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/BOc1vTIh.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/CZs2BsIZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/BYpJxyEo.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/V4CQnCvN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/BovCF-eY.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/Bh7IsZx0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/C_7YHfOI.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/BZYq9s8F.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/CdNJnwRN.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/C7tIIzKb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/D4q7eVrr.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/CPvwP0gT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/builds/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/builds/latest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/f1_QWs2C.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/DxNofCv8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/yn18JxeF.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/BrXmbVz4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/zaGfdtZU.js" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/o-GgIzoR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/user/projects/dvegasa.github.io",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu/home/user/projects/dvegasa.github.io&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\user\projects\dvegasa.github.io" />
@@ -63,6 +83,7 @@
       <updated>1717765519430</updated>
       <workItem from="1717765520425" duration="630000" />
       <workItem from="1717768841527" duration="394000" />
+      <workItem from="1717776455670" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="dvegasa-ru-nuxt release!">
       <option name="closed" value="true" />
@@ -80,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717768907286</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1717776480200</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717776480200</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
