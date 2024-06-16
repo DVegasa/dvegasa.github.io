@@ -1,0 +1,1 @@
+import{q as a,P as s,o,c as n,M as r}from"./D1atq9-z.js";import{E as _}from"./CqG4hWE2.js";const c={class:"PageXp"},f=a({__name:"PageXp",async setup(p){let e,t;return[e,t]=s(()=>r(_.xp,{external:!0})),await e,t(),(i,l)=>(o(),n("div",c))}});export{f as default};
