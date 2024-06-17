@@ -1,0 +1,1 @@
+import{_ as s,c as o,n as t,o as a}from"./ebQfwCgt.js";const c={},n={class:"LayoutBase"};function r(e,_){return a(),o("div",n,[t(e.$slots,"default")])}const d=s(c,[["render",r]]);export{d as default};

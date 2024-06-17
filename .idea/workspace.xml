@@ -69,6 +69,7 @@
       <workItem from="1717778810967" duration="20000" />
       <workItem from="1717779932118" duration="25000" />
       <workItem from="1717999034663" duration="18000" />
+      <workItem from="1718547060602" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="dvegasa-ru-nuxt release!">
       <option name="closed" value="true" />
@@ -102,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717776735546</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1718547086696</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718547086696</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
