@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba605fd-fb61-43f1-b377-bd02bbdd38ad" name="Changes" comment="deploy" />
+    <list default="true" id="aba605fd-fb61-43f1-b377-bd02bbdd38ad" name="Changes" comment="deploy">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +72,7 @@
       <workItem from="1717779932118" duration="25000" />
       <workItem from="1717999034663" duration="18000" />
       <workItem from="1718547060602" duration="640000" />
+      <workItem from="1718641476663" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="dvegasa-ru-nuxt release!">
       <option name="closed" value="true" />
