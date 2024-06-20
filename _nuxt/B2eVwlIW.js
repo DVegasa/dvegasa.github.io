@@ -1,0 +1,1 @@
+import{q as a,R as s,o,c as n,O as r}from"./Ci1Syp4K.js";import{E as c}from"./CqG4hWE2.js";const _={class:"PageCv"},u=a({__name:"PageCv",async setup(i){let e,t;return[e,t]=s(()=>r(c.cv,{external:!0})),await e,t(),(l,m)=>(o(),n("div",_))}});export{u as default};
